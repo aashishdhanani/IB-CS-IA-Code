@@ -48,8 +48,12 @@ public class gradebook {
                 System.out.print(category.name + " " + "(" + category.weight + ")" + " ");
             }
         }
-
-//enter validation to make sure that the category weights add to 100%
-
+        
+            for(Course course: courses) {
+                System.out.println(course.getCourseName() + ":");
+            for(Category category : course.categories) {
+                System.out.print(category.name + " " + "(" + category.weight + ")" + ": " + "\n" + category.getGrades() + "\n\n");
+            }
+        }
     }
 }
